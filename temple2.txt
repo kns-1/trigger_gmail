@@ -11,7 +11,7 @@ dstatus=0
 #reading data from cloud based on field id as argument
 def sRead(t1):
     print 'reading data'
-    k=URL.urlopen('https://api.thingspeak.com/channels/288209/fields/'+str(t1)+'.json?results=1').read()
+    k=URL.urlopen('https://api.thingspeak.com/channels/*****/fields/'+str(t1)+'.json?results=1').read()
     k=k.split('"')[-2]
     time.sleep(3)
     print 'Data is read'
@@ -21,7 +21,7 @@ def sRead(t1):
 #uploading data (different from sensor data uploading. Here, we are NOT taking field arguments
 def sUpload(fid,msg):
     print 'Data is being uploaded'
-    k=URL.urlopen('https://api.thingspeak.com/update?api_key=HZIUJNQ1UZLTTCZ6&field'+str(fid)+'= '+str(msg))
+    k=URL.urlopen('https://api.thingspeak.com/update?api_key=***************&field'+str(fid)+'= '+str(msg))
     print(k)
     time.sleep(3)
     print 'Data is uploaded successfully'
