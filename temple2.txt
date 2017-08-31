@@ -18,7 +18,7 @@ def sRead(t1):
     return(k)
 
 
-#uploading data (different from sensor data uploading. Here, we are NOT taking field arguments
+#uploading data (different from sensor data uploading. Here, we are NOT taking field arguments)
 def sUpload(fid,msg):
     print 'Data is being uploaded'
     k=URL.urlopen('https://api.thingspeak.com/update?api_key=***************&field'+str(fid)+'= '+str(msg))
